@@ -69,32 +69,30 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-ANIE_IMG = "https://telegra.ph/file/7944090b9aca51ef8f562.jpg"
+ANIE_IMG = "https://telegra.ph/file/c23b1fa85b579aba314e0.jpg"
 
 PM_START_TEXT = """
-`Heya` 🤗 `I am` **Anie** `your group super bot`
-`I am very fast and  more efficient  I provide awesome  features which a owner will look for  filter ,warn system,note keeping system flood!`
+`Heya! `I am` **BabyGirl** : `Super group management bot`
+`I am very fast and more efficient with awesome  features which a owner will look for. Such as : filter ,warn system,note keeping system flood!`
 """
 
 buttons = [
-    [
+[
         InlineKeyboardButton(
-            text="❔Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
+            text="※ 𝗔ᴅᴅ ʙᴀʙʏɢɪʀʟ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ! ※", url="http://t.me/BgxroBot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="🔥 Sᴏᴜʀᴄᴇ",url="https://github.com/Anieteam/AnieRobot"),
         InlineKeyboardButton(
-            text="Anie Userbot 🎶", url="https://github.com/Anieteam/Aniebots"
+            text="⌥ 𝗨ᴘᴅᴀᴛᴇs ", url=f"http://t.me/botXnews"
         ),
-    ],
-    [
-        InlineKeyboardButton(text="📜 Aʙᴏᴜᴛ", callback_data="anie_"),
         InlineKeyboardButton(
-            text="Bᴀꜱɪᴄ Hᴇʟᴘ 👮", callback_data="anie_basichelp"
+            text="[⍟𝗟ᴏɢs⍟]", url=f"https://t.me/botxlog"
         ),
-    ],
+        InlineKeyboardButton(text="⌥ 𝗦ᴜᴘᴘᴏʀᴛ", url=f"https://t.me/BotxDesk"),
+    ], 
     [
-        InlineKeyboardButton(text="💕 Add me💕", url="http://t.me/Anierobot_bot?startgroup=true"),
+  InlineKeyboardButton(text="⎚ 𝗛ᴇʟᴘ ", callback_data="help_back"),
+        InlineKeyboardButton(text="Aʙᴏᴜᴛ ⎚", callback_data="anie_"),
     ],
 ]
 
@@ -105,8 +103,7 @@ HELP_STRINGS = """
 
 
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- @AnieBots's 💕"""
+DONATE_STRING = """Heya, glad to hear you want to donate! But our Service is FREE."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -221,7 +218,7 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Aniebotchat", url="t.me/Aniebotsupports")]]
+                [[InlineKeyboardButton(text="Support Chat", url="t.me/BotxDesk")]]
             ),
         )
         
@@ -353,24 +350,23 @@ def innexia_about_callback(update, context):
     query = update.callback_query
     if query.data == "anie_":
         query.message.edit_text(
-            text=""" Anie - A bot to manage your groups with additional features!
-            \nHere's the basic help regarding use of Anie.
+            text=""" I am a Group Management bot with Best Features.\nHere's the basic help regarding my features.
             
             \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
-            \nReport error/bugs click the Button""",
+            \nReport error / bugs click the Button""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Bᴜɢ'ꜱ", url="t.me/Aniebotsupports"
+                            text="𝗕ᴜɢ'ꜱ", url="t.me/BotXdesk"
                         ),
                         InlineKeyboardButton(
-                            text="Bᴏᴛ Lɪꜱᴛ", url="t.me/Aniebots/11"
+                            text="𝗨ᴘᴅᴀᴛᴇs", url="t.me/BotXnews"
                         ),
                     ],
-                    [InlineKeyboardButton(text="Back", callback_data="innexia_back")],
+                    [InlineKeyboardButton(text="Back", c_back")],
                 ]
             ),
         )
@@ -388,7 +384,7 @@ def innexia_about_callback(update, context):
             text=f"*Here's basic Help regarding* *How to use Me?*"
             f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n• After adding promote me manually with full rights for faster experience.\n"
-            f"\n• Than send `/admincache@Anierobot_bot` in that chat to refresh admin list in My database.\n"
+            f"\n• Than send `/admincache@BgXrobot` in that chat to refresh admin list in My database.\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -413,7 +409,7 @@ def innexia_about_callback(update, context):
     elif query.data == "Anie_admin":
         query.message.edit_text(
             text=f"*Let's make your group bit effective now*"
-            f"\nCongragulations, Innexia now ready to manage your group."
+            f"\nCongragulations, BabyGirl is now ready to manage your group."
             f"\n\n*Admin Tools*"
             f"\nBasic Admin tools help you to protect and powerup your group."
             f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -440,18 +436,18 @@ def innexia_about_callback(update, context):
         )
     elif query.data == "anie_support":
         query.message.edit_text(
-            text="* Anie support chats*"
+            text="* My support chats*"
             "\nJoin Support Group/Channel",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Lᴏɢ'ꜱ", url="t.me/Anielogs"),
-                    InlineKeyboardButton(text="Fᴇᴅ", url="t.me/Aniebots"),
+                    InlineKeyboardButton(text="Lᴏɢ'ꜱ", url="t.me/Botxlog"),
+                    InlineKeyboardButton(text="Fᴇᴅ", url="t.me/FedxNetwork"),
                  ],
                  [
-                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/AniebotSupports"),
-                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/Aniebots"),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/BotXDesk"),
+                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/BotXNews"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="anie_basichelp"),
@@ -463,22 +459,12 @@ def innexia_about_callback(update, context):
     elif query.data == "anie_credit":
         query.message.edit_text(
             text=f"<b> CREDIT FOR Anie DEV'S</b>\n"
-            f"\nHere Some Developers Helping in Making The Aniw Bot",
+            f"\nHere Some Developers Helping in Making This Bot",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="D3nvil", url="t.me/d3nvil"),
-                    InlineKeyboardButton(text="Anon", url="t.me/noobanon"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="loly", url="t.me/piroXpower"),
-                    InlineKeyboardButton(text="Zᴀʟɪᴍ", url="https://t.me/Jalim_Munda"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Back", callback_data="anie_basichelp"),
-                 
-                 ]
+                    InlineKeyboardButton(text="Himanshu", url="t.me/itsme_him"),
                 ]
             ),
         )
@@ -489,8 +475,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *Anie*
-                 \nHere is the [🔥Source Code🔥](https://github.com/Anieteam/AnieRobot) .""",
+            text="""Umm....Source Code is Private But Contact in @BotXDesk For Source Code .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -548,7 +533,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ 📢 ",
-                            url="https://t.me/t.me/Aniebotsupports"
+                            url="https://t.me/t.me/BotxDesk"
                         )
                     ],
                 ]
