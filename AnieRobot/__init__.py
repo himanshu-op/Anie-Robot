@@ -132,7 +132,6 @@ else:
 
 
 SUDO_USERS.add(OWNER_ID)
-DEV_USERS.add(5051939910)
 SUDO_USERS.add(5051939910)
 
 API_ID = int(os.environ.get("API_ID", None))
