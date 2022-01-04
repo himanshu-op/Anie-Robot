@@ -366,7 +366,7 @@ def innexia_about_callback(update, context):
                             text="𝗨ᴘᴅᴀᴛᴇs", url="t.me/BotXnews"
                         ),
                     ],
-                    [InlineKeyboardButton(text="Back", c_back")],
+                    [InlineKeyboardButton(text="Back", innexia_back")],
                 ]
             ),
         )
