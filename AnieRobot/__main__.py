@@ -463,7 +463,9 @@ def innexia_about_callback(update, context):
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
+                    [
                     InlineKeyboardButton(text="Himanshu", url="t.me/itsme_him"),
+                    ]
                 ]
             ),
         )
