@@ -11,12 +11,12 @@ class Config(object):
 
     # REQUIRED
     API_KEY = ""
-    OWNER_ID = "1091139479"  # If you dont know, run the bot and do /id in your private chat with it
-    OWNER_USERNAME = "d3nvil"
-    TOKEN = '1306525471:AAEu2agIza0S8FNr9cLjvslhB9oLkhcjVlE'
+    OWNER_ID = "5051939910"  # If you dont know, run the bot and do /id in your private chat with it
+    OWNER_USERNAME = "itsme_him"
+    TOKEN = '5049931853:AAFh1NSNgHKL_FVUgKbi8GL3Hvy27AHNsw8'
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = 'postgres://pwbjkedt:yHtCdpZsk8IzHvS3nt3MRXWtnC9bid0m@satao.db.elephantsql.com/pwbjkedt'  # needed for any database modules
+    SQLALCHEMY_DATABASE_URI = 'postgres://tkummsus:0_ffQHNWjosq--ArAyLdptaehhsttHeD@castor.db.elephantsql.com/tkummsus'  # needed for any database modules
     MESSAGE_DUMP = '' # needed to make sure 'save from' messages persist
     LOAD = []
     NO_LOAD = ['translation']
